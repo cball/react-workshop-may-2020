@@ -28,7 +28,7 @@ export default function App() {
   }
 
   function toggleTheme() {
-    if (theme == themes.light) {
+    if (theme === themes.light) {
       setTheme(themes.dark);
       return;
     }
