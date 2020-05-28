@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { useDebounce } from "../../hooks/useDebounce";
-import { ThemeContext } from "../..";
+import { useTheme } from "../../hooks/useTheme";
 
 async function fetchRecipes(query = "") {
   const result = await fetch(`http://localhost:3001/recipes?q=${query}`);
@@ -13,7 +13,7 @@ async function fetchRecipes(query = "") {
 export function RecipeList({ query = "" }) {
   const [recipes, setRecipes] = useState([]);
   const debouncedQuery = useDebounce(query, 300);
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useTheme();
 
   useEffect(() => {
     async function doFetch() {
