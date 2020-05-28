@@ -13,7 +13,7 @@ describe("calculateAverageRating", () => {
   describe("with a junk array", () => {
     it("returns undefined", () => {
       const ratings = ["hello", "there"];
-      const result = calculateAverageRating(ratings);
+      const result = calculateAverageRating(ratings as any);
 
       expect(result).toBeUndefined();
       expect(result).toBeUndefined();
