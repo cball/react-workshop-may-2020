@@ -11,9 +11,17 @@
     "start": "concurrently --names \"REACT,API\" -c \"bgBlue,bgMagenta\" \"react-scripts start\" \"json-server --watch db.json -p 3001\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/preset-create-react-app": "^3.0.0",
+    "@storybook/react": "^5.3.19",
     "@testing-library/jest-dom": "^5.9.0",
     "@testing-library/react": "^10.0.4",
     "concurrently": "^5.2.0",
