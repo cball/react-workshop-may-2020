@@ -10,10 +10,21 @@ export function StarRating({ maxStars, rating }) {
   const starArray = Array.from({ length: maxStars });
 
   return starArray.map((star, index) => {
-    if (index + 1 <= rating) return <FaStar key={index} color={theme.yellow} />;
+    if (index + 1 <= rating)
+      return (
+        <FaStar key={index} color={theme.yellow} data-testid="filledStar" />
+      );
     if (index < rating)
-      return <FaStarHalfAlt key={index} color={theme.yellow} />;
+      return (
+        <FaStarHalfAlt
+          key={index}
+          color={theme.yellow}
+          data-testid="halfStar"
+        />
+      );
 
-    return <FaRegStar key={index} color={theme.yellow} />;
+    return (
+      <FaRegStar key={index} color={theme.yellow} data-testid="emptyStar" />
+    );
   });
 }
