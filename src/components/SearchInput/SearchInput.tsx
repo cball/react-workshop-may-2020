@@ -1,4 +1,10 @@
-import React, { useReducer, useEffect, useRef, HTMLProps } from "react";
+import React, {
+  useReducer,
+  useEffect,
+  useRef,
+  HTMLProps,
+  ChangeEvent,
+} from "react";
 import { FaWindowClose } from "react-icons/fa";
 import { useTheme } from "../../hooks/useTheme";
 
